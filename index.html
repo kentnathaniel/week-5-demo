@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Week 5</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+  </head>
+  <body class="vw-100 vh-100 d-flex flex-column align-items-center">
+    <form
+      id="scoring-form"
+      class="d-flex flex-column align-items-center justify-content-center mt-5"
+    >
+      <h1>Form penilaian mahasiswa</h1>
+      <div class="d-flex flex-column mb-4">
+        <label for="name">Name</label>
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter student name"
+        />
+        <small></small>
+      </div>
+      <div class="d-flex flex-column mb-4">
+        <label for="email">Student score</label>
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          id="score"
+          name="score"
+          placeholder="Enter the score"
+        />
+        <small></small>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg">Submit Nilai</button>
+    </form>
+    <div>
+      <table class="table table-striped table-info mt-4" style="width: 500px">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Nilai</th>
+          </tr>
+        </thead>
+        <tbody id="score-table-body">
+          <!-- <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>23</td>
+          </tr> -->
+        </tbody>
+      </table>
+      <button id="save-button" class="btn btn-primary btn-lg mt-2">Save Nilai to File</button>
+    </div>
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-body">Hello, world! This is a toast message.</div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
